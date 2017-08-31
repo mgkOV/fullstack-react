@@ -3,7 +3,7 @@ const webpack = require('webpack');
 
 const config = {
   resolve: {
-    modules: [path.resolve('./lib'), path.resolve('./node_modules')]
+    modules: [path.resolve('./node_modules'), path.resolve('./lib')]
   },
   entry: ['babel-polyfill', './lib/renderers/dom.js'],
   output: {
