@@ -5,22 +5,20 @@
   "main": "lib/server.js",
   "license": "MIT",
   "scripts": {
-    "dev": "NODE_PATH=./lib pm2 start lib/server.js --watch --interpreter babel-node",
+    "dev": "NODE_PATH=./lib nodemon lib/server.js --exec babel-node",
     "webpack": "webpack -wd",
     "test": "jest --watch"
   },
   "babel": {
-    "presets": [
-      "react",
-      "env",
-      "stage-2"
-    ]
+    "presets": ["react", "env", "stage-2"]
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
     "eslint": "^4.5.0",
     "eslint-plugin-react": "^7.3.0",
     "jest": "^20.0.4",
+    "nodemon": "^1.11.0",
+    "react-addons-perf": "^15.4.2",
     "react-test-renderer": "^15.6.1"
   },
   "dependencies": {
@@ -34,10 +32,13 @@
     "ejs": "^2.5.7",
     "enzyme": "^2.9.1",
     "express": "^4.15.4",
+    "lodash.debounce": "^4.0.8",
+    "lodash.pickby": "^4.6.0",
     "pm2": "^2.6.1",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "reload": "^2.2.2",
     "webpack": "^3.5.5"
   }
 }
